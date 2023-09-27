@@ -4,8 +4,10 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  /* --background-start-rgb: 214, 219, 220; */
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
+  --background-reverse-rgb: 220, 220, 220;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +15,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --background-reverse-rgb: 220, 220, 220;
   }
 }
 
@@ -24,4 +27,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.backdrop-blur {
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }

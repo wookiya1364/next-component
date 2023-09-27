@@ -18,10 +18,15 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@component/*": ["components/*"],
+      "@layouts/*": ["app/@layouts/*"],
+      "@movie/*": ["./public/movie/*"],
+      "@picture/*": ["./public/picture/*"],
+      "@svg/*": ["app/svg/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "jest.setup.js"],
   "exclude": ["node_modules"]
 }
